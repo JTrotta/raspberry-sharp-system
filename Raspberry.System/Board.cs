@@ -245,7 +245,10 @@ namespace Raspberry
 
                 case 0x2082:
                     return Model.B3;
-
+                    
+                case 0x20A0:
+                    return Model.ComputeModule3;
+                    
                 default:
                     return Model.Unknown;
             }
@@ -268,6 +271,7 @@ namespace Raspberry
                 case Model.B2:
                 case Model.Zero:
                 case Model.B3:
+                case Model.ComputeModule3:                    
                     return ConnectorPinout.Plus;
 
                 default:
