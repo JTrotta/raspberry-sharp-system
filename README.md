@@ -15,7 +15,7 @@ Features
 
 ### Raspberry.System
 Raspberry.System provides utilities for Raspberry Pi boards, while using .NET concepts, syntax and case.
-You can easily add a reference to it in your Visual Studio projects using the **[Raspberry.System Nuget](https://www.nuget.org/packages/Raspberry.System)**.
+You can easily add a reference to it in your Visual Studio projects using the **[Raspberry.System Nuget](https://www.nuget.org/packages/Raspberry.System3)**.
 
 It currently support the following features:
 + Automatic detection of various Raspberry Pi revisions, as of 2013-09, **Raspberry Pi model B rev1 and rev2 and Raspberry Pi model A**
