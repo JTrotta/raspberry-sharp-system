@@ -56,7 +56,7 @@ namespace Raspberry
         /// <summary>
         /// Pi 3 Model B.
         /// </summary>
-        B3
+        B3,
         
         /// <summary>
         /// Compute module 3.
