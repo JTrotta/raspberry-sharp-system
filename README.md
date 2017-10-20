@@ -1,3 +1,6 @@
+
+[![BCH compliance](https://bettercodehub.com/edge/badge/JTrotta/raspberry-sharp-system?branch=master)](https://bettercodehub.com/)
+
 Raspberry# System
 =================
 
@@ -19,4 +22,4 @@ You can easily add a reference to it in your Visual Studio projects using the **
 
 It currently support the following features:
 + Automatic detection of various Raspberry Pi revisions, as of 2013-09, **Raspberry Pi model B rev1 and rev2 and Raspberry Pi model A**
-+ High resolution (about 1µs) timers
++ High resolution (about 1Âµs) timers
