@@ -243,6 +243,9 @@ namespace Raspberry
                 case 0x0093:
                     return Model.Zero;
 
+                case 0x00C1:
+                    return Model.ZeroW;
+
                 case 0x2082:
                     return Model.B3;
                     
