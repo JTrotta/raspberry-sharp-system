@@ -84,7 +84,7 @@ namespace Raspberry
             switch (model)
             {
                 case Model.Unknown:
-                    return null;
+                    return "Unknown - not a Pi!";
                 case Model.A:
                     return "Raspberry Pi Model A";
                 case Model.APlus:

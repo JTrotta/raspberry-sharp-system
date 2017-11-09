@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using Raspberry;
 
 namespace Test.Board
@@ -7,16 +8,19 @@ namespace Test.Board
     {
         static void Main()
         {
+            // Setup tracing for test app
+            Tracing.raspberrySystemTraceSwitch.Level = TraceLevel.Verbose;
+            Trace.Listeners.Add( new ConsoleTraceListener() );
+
             var board = Raspberry.Board.Current;
 
-            if (!board.IsRaspberryPi)
-                Console.WriteLine("System is not a Raspberry Pi");
+
+            if ( !board.IsRaspberryPi )
+                Console.WriteLine( "System is not a Raspberry Pi" );
             else
             {
-                Console.WriteLine("Raspberry Pi running on {0} processor", board.Processor);
-                Console.WriteLine("Firmware rev{0}, board model {1} ({2})", board.Firmware, board.Model, board.Model.GetDisplayName() ?? "Unknown");
-                Console.WriteLine();
-                Console.WriteLine("Serial number: {0}", board.SerialNumber);
+                Console.WriteLine( "Raspberry Pi running on {0} processor.", board.Processor );
+                Console.WriteLine( board );
             }
         }
     }

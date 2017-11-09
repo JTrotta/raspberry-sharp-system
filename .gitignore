@@ -9,6 +9,7 @@ TestResults
 **.user
 **.suo
 **.sdf  
+.vs/*
 
 # resharper  
 /_[Rr]e[Ss]harper.*  
@@ -20,3 +21,7 @@ TestResults
 [Dd]esktop.ini
 
 RaspberrySharp.System.userprefs
+
+# Nuget packages
+packages/*
+!packages/repositories.config
