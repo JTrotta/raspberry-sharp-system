@@ -19,7 +19,7 @@ namespace Test.Board
                 Console.WriteLine( "System is not a Raspberry Pi" );
             else
             {
-                Console.WriteLine( "Raspberry Pi running on {0} processor.", board.Processor );
+                Console.WriteLine( "Raspberry Pi running on {0} processor.\n", board.Processor );
                 Console.WriteLine( board );
             }
         }

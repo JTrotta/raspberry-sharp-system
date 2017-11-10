@@ -21,6 +21,7 @@ namespace Raspberry
     /// <list type="bullet">
     /// <item>IsOverClocked has been removed. This used the "warranty" flag (i.e. void if overclocked) but this policy was changed.</item>
     /// <item>Firmware has been changed to RevisionCode.</item>
+    /// <item>Details about the cores are also loaded.</item>
     /// </list>
     /// </remarks>
     public class Board
@@ -139,50 +140,53 @@ namespace Raspberry
 
         private void LoadBoard()
         {
-            var readingCoreInfo = false;
             IsRaspberryPi = true;
             string[] cpuInfo;
             try
             {
-                //const string filePath = "/proc/cpuinfo";
-                const string filePath = @"c:\ddata\Temp\cpuinfo";
-                cpuInfo = File.ReadAllLines(filePath);
+                const string filePath = "/proc/cpuinfo";
+                Tracing.TraceInfo( $"Loading board information from '{filePath}'." );
+                cpuInfo = File.ReadAllLines( filePath );
             }
-            catch (Exception ex)
+            catch ( Exception ex )
             {
-                Tracing.TraceError("Unable to read cpuinfo - are you sure this is a Pi? " + ex.Message);
+                Tracing.TraceError( "Unable to read cpuinfo - are you sure this is a Pi? " + ex.Message );
                 IsRaspberryPi = false;
                 return;
             }
 
             Core currentCore = null;
-            foreach (var l in cpuInfo)
+            foreach ( var l in cpuInfo )
             {
-                var separator = l.IndexOf(':');
+                var separator = l.IndexOf( ':' );
 
-                if (!string.IsNullOrWhiteSpace(l) && separator > 0)
+                if ( !string.IsNullOrWhiteSpace( l ) && separator > 0 )
                 {
-                    var key = l.Substring(0, separator).Trim().ToUpper();
-                    var val = l.Substring(separator + 1).Trim();
-                    switch (key)
+                    var key = l.Substring( 0, separator ).Trim().ToLower();
+                    var val = l.Substring( separator + 1 ).Trim();
+                    switch ( key )
                     {
-                        case "REVISION":
+                        case "revision":
                             uint revision;
-                            if (uint.TryParse(val, NumberStyles.HexNumber, null, out revision))
+                            if ( uint.TryParse( val, NumberStyles.HexNumber, null, out revision ) )
                             {
                                 RevisionCode = revision;
                             }
+                            else
+                            {
+                                Tracing.TraceError( $"Unable to parse revision number string - {val}." );
+                            }
                             break;
 
-                        case "SERIAL":
+                        case "serial":
                             SerialNumber = val;
                             break;
 
-                        case "PROCESSOR":
+                        case "processor":
                             int coreNum;
                             if ( int.TryParse( val, out coreNum ) )
                             {
-                                currentCore = new Core(coreNum);
+                                currentCore = new Core( coreNum );
                                 cores.Add( currentCore );
                             }
                             else
@@ -192,11 +196,12 @@ namespace Raspberry
                             break;
 
                         default:
-                            currentCore?.SetState(key, val);
+                            currentCore?.SetState( key, val );
                             break;
                     }
                 }
             }
+            Tracing.TraceInfo( "Board information loading complete." );
         }
 
         /// <summary>
