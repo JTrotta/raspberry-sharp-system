@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/d9bswf8kwk484tva?svg=true)](https://ci.appveyor.com/project/JTrotta/raspberry-sharp-system) [![BCH compliance](https://bettercodehub.com/edge/badge/JTrotta/raspberry-sharp-system?branch=master)](https://bettercodehub.com/)
+[![NuGet Badge](https://buildstats.info/nuget/Raspberry.System3)](https://www.nuget.org/packages/Raspberry.System3/)[![Build status](https://ci.appveyor.com/api/projects/status/d9bswf8kwk484tva?svg=true)](https://ci.appveyor.com/project/JTrotta/raspberry-sharp-system) [![BCH compliance](https://bettercodehub.com/edge/badge/JTrotta/raspberry-sharp-system?branch=master)](https://bettercodehub.com/)
 
 Raspberry# System
 =================
