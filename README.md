@@ -1,5 +1,4 @@
-
-[![BCH compliance](https://bettercodehub.com/edge/badge/JTrotta/raspberry-sharp-system?branch=master)](https://bettercodehub.com/)
+[![Build status](https://ci.appveyor.com/api/projects/status/d9bswf8kwk484tva?svg=true)](https://ci.appveyor.com/project/JTrotta/raspberry-sharp-system) [![BCH compliance](https://bettercodehub.com/edge/badge/JTrotta/raspberry-sharp-system?branch=master)](https://bettercodehub.com/)
 
 Raspberry# System
 =================
