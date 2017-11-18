@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DE3AA526-5A9D-465A-B9B0-7A07AE6824B5}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9D7C75
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7102091A-58D6-4ACC-90B7-6729AEF0586F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{8759C074-D71D-4B13-B6E0-911C5C725EC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Raspberry.System", "UnitTests\Tests.Raspberry.System\Tests.Raspberry.System.csproj", "{5796DDAD-0499-46FD-BD21-65E1641CB72D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,11 +57,27 @@ Global
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396}.Release|x86.ActiveCfg = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Debug|x86.Build.0 = Debug|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|x86.ActiveCfg = Release|Any CPU
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{51780F8A-E5F5-4DC8-84B4-B282800A3396} = {7102091A-58D6-4ACC-90B7-6729AEF0586F}
+		{5796DDAD-0499-46FD-BD21-65E1641CB72D} = {8759C074-D71D-4B13-B6E0-911C5C725EC5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACB622C0-D7FD-41E6-9F29-20CD1630E1D4}
 	EndGlobalSection
 EndGlobal

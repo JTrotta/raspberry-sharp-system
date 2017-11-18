@@ -11,18 +11,18 @@ namespace Raspberry
         Unknown,
 
         /// <summary>
-        /// Processor is a BCM2708.
+        /// Processor is a BCM2835. (Used to be referred to as BCM2708.)
         /// </summary>
-        Bcm2708,
+        Bcm2835,
 
         /// <summary>
-        /// Processor is a BCM2709.
+        /// Processor is a BCM2836. (Used to be referred to as BCM2709.)
         /// </summary>
-        Bcm2709,
+        Bcm2836,
 
         /// <summary>
-        /// Processor is BCM2835
+        /// Processor is BCM2837
         /// </summary>
-        BCM2835 // <- added this one JJ FIX per RB3/CM3
+        Bcm2837
     }
 }
